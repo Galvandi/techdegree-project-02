@@ -1,0 +1,257 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "lato", sans-serif;
+  line-height: 1.4;
+  color: #666;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1.5em;
+  font-size: 0.95rem;
+}
+
+h1,
+h2,
+h3,
+a
+ {
+  font-family: "ubuntu", sans-serif;
+  color: #555;
+  font-weight: 700;
+}
+
+
+
+h1 {
+  margin-top: 5px;
+  font-size: 1.8rem;
+}
+
+h2 {
+  margin: 2rem 0;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  width: 90%;
+  border-color: #f1f1f1;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.main-nav ul li {
+  background-color: #fff;
+  margin-bottom: 5px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.main-nav a {
+  padding: 8px 0;
+  display: block;
+}
+
+/* ----  Containers---- */
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-header,
+.main-footer,
+#contact {
+  background-color: #f5f5f5;
+  padding: 1em 0;
+}
+
+.logo {
+  margin-top: 20px;
+  width: 70%;
+}
+
+/* ---- Contact Section ---- */
+#contact {
+  margin-top: 90px;
+}
+
+.contact-data {
+  font-style: normal;
+  margin: 30px 0;
+}
+
+.contact-data p {
+  margin-bottom: 0;
+}
+
+.contact-data a {
+  font-weight: 700;
+  margin-left: 1em;
+}
+
+/* ---- Footer ---- */
+.main-footer {
+  font-size: 0.85em;
+  
+}
+
+.main-footer-wrapper span {
+    font-weight: 700;
+}
+
+.main-footer-wrapper {
+  text-align: left;
+  padding: 15px 0;
+  font-family: "ubuntu", sans-serif; 
+  border-top: 1px solid #d8d6d6;
+}
+
+.main-footer-nav {
+  float: right;
+  text-transform: uppercase;
+}
+
+.main-footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-footer-nav ul li {
+  display: inline-block;
+}
+
+.list-item-wide {
+  display: none;
+}
+
+
+/* ---- Float clearfix ---- */
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (min-width: 768px) {
+    .main-nav ul li {
+        background-color: initial;
+        display: inline-block;
+        padding: 15px;
+        margin-bottom: 0;
+    }
+
+    .main-header {
+        padding-bottom: 60px;
+    }
+
+    .profile-text {
+        float: left;
+        width: 60%;
+        padding-right: 1em;
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        float: right;
+        width: 40%;
+    }
+
+    .project {
+        width: 50%;
+        float: left;
+        padding: 0.25em;
+    }
+
+    .project p {
+      width: 70%;
+      
+      margin: 2em auto;
+    }
+
+    .main-footer {
+        padding-bottom: 50px;
+    }
+
+    .contact-text {
+        width: 75%;
+        margin: 0 auto;
+        font-size: 1.2rem;
+    }
+
+    /* ---- footer list items ---- */
+    .list-item-narrow {
+        display: none;
+
+    }
+    .list-item-wide {
+        display: inline-block;
+        padding-left: 15px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+
+  .container {
+    max-width: 1200px;
+  }
+    .main-nav ul li {
+      padding: 0 15px;
+    }
+    .name {
+        float: left;
+    }
+
+    .main-nav {
+        float: right;
+        padding: 10px 0;
+    }
+
+    .main-nav ul {
+      margin: 0;
+    }
+
+
+    .project {
+        padding: 5px;
+        width: 33%;
+    }
+
+
+}
