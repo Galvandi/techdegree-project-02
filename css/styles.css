@@ -100,73 +100,53 @@ img {
 
 
 /* ---- Skills Section ---- */
-
-#skills {
-  vertical-align: baseline;
-}
 .skill {
-  
   display: inline-block;
-  margin: 5px 20px;
-  padding: 5px;
+  margin: 15px 25px;
+  text-align: center;
 }
-.skill-graph {
+
+.battery {
+  display: flex;
+  padding: 3px;
   position: relative;
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
+  margin: 5px;
+  width: 120px;
+  height: 50px;
+  background-color: #eee;
+  border: 5px solid black;
+  border-radius: 7px;
 }
 
-.skill-10 {
-  background-image: conic-gradient(#22bf22 0 deg 36deg, #eee 36deg 360deg);
-}
-.skill-20 {
-  background-image: conic-gradient(#22bf22 72deg, #eee 72deg);
-}
-.skill-30 {
-  background-image: conic-gradient(#22bf22 108deg, #eee 108deg);
-}
-.skill-40 {
-  background-image: conic-gradient(#22bf22 144deg, #eee 144deg);
-}
-.skill-50 {
-  background-image: conic-gradient(#22bf22 180deg, #eee 180deg);
-}
-.skill-60 {
-  background-image: conic-gradient(#22bf22 216deg, #eee 216deg);
-}
-.skill-70 {
-  background-image: conic-gradient(#22bf22 252deg, #eee 252deg);
-}
-.skill-80 {
-  background-image: conic-gradient(#22bf22 288deg, #eee 288deg);
-}
-.skill-90 {
-  background-image: conic-gradient(#22bf22 324deg, #eee 324deg);
-}
-.skill-100 {
-  background-image: conic-gradient(#22bf22 360deg, #eee 360deg);
-}
-
-.skill-ultra {
-  background-image: conic-gradient(rgba(224, 14, 14, 0.2) 90deg, transparent 90deg),
-  conic-gradient(#22bf22 360deg, #eee 360deg);
-}
-
-.skill-graph-center {
+.battery::after {
+  content: "";
   position: absolute;
-  margin: 0;
-  top: 10px;
-  right: 10px;
-  bottom:10px;
-  left: 10px;
-  background-color: #fff;
-  border-radius: 100%;
-  font-size: 1rem;
-  line-height: 60px;
+  top: 50%;
+  left: calc(100% + 1px);
+  transform: translateY(-50%);
+  display: block;
+  background: black;
+  height: 50%;
+  width: 10px;
+  border-radius: 0 100% 100% 0;
 }
 
+.cell {
+  flex: 1;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #22bf22;
+  margin: 0 1px;
+  border: 4px solid black;
+}
+
+.cell-invisible {
+  visibility: hidden;
+}
+
+.skill-description {
+  margin-top: 1em;
+}
 
 
 /* ---- Contact Section ---- */
@@ -275,18 +255,17 @@ img {
 
   .project p {
     width: 70%;
-
     margin: 0 auto;
-  }
-
-  .main-footer {
-    padding-bottom: 50px;
   }
 
   .contact-text {
     width: 75%;
     margin: 0 auto;
     font-size: 1.2rem;
+  }
+
+  .main-footer {
+    padding-bottom: 20px;
   }
 
   /* ---- footer list items ---- */
@@ -301,10 +280,9 @@ img {
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 1100px;
+    max-width: 1200px;
   }
-  .main-nav ul li {
-  }
+
   .name {
     float: left;
   }
@@ -320,6 +298,6 @@ img {
 
   .project {
     padding: 5px;
-    width: 33%;
+    width: 33.3%;
   }
 }
