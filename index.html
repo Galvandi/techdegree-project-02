@@ -7,7 +7,7 @@
     <title>Student Name Profile</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:500,700" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -18,27 +18,89 @@
     <header class="main-header" id="home">
         <div class="container clearfix">
             <h1 class="name">Student Name</h1>
-            <nav class="main-nav clearfix">
+            <nav class="main-nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
 
-            <div class="profile container clearfix">
-                <img class="logo" src="images/responsive-layout-profile.png"
-                    alt="an image showing the person to whom this profile belongs to">
+        <div class="profile container clearfix">
+            <img class="logo" src="images/responsive-layout-profile.png"
+                alt="an image showing the person to whom this profile belongs to">
 
-                <p class="profile-text">Hi! I'm a front-end developer who loves responsive design and css. I recently
-                    finished a degree in
-                    front-end
-                    web development at Treehouse and am excited to put all my skills to use!</p>
-            </div>
+            <p class="profile-text">Hi! I'm a front-end developer who loves responsive design and css. I recently
+                finished a degree in
+                front-end
+                web development at Treehouse and am excited to put all my skills to use!</p>
+        </div>
     </header>
 
     <main>
+        <section id="skills">
+            <div class="container clearfix">
+                <h2>Skills</h2>
+
+                <div class="skill">
+                    <div class="skill-graph skill-90">
+                        <div class="skill-graph-center ">
+                            <span>90%</span>
+                        </div>
+                    </div>
+                    <p class="skill-description">HTML/CSS</p>
+                </div>
+
+
+
+                <div class="skill">
+                    <div class="skill-graph skill-70">
+                        <div class="skill-graph-center ">
+                            <span>70%</span>
+                        </div>
+                    </div>
+                    <p class="skill-description">WordPress</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-graph skill-70">
+                        <div class="skill-graph-center ">
+                            <span>70%</span>
+                        </div>
+                    </div>
+                    <p class="skill-description">UI/UX</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-graph skill-60">
+                        <div class="skill-graph-center ">
+                            <span>60%</span>
+                        </div>
+                    </div>
+                    <p class="skill-description">Javascript</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-graph skill-40">
+                        <div class="skill-graph-center ">
+                            <span>40%</span>
+                        </div>
+                    </div>
+                    <p class="skill-description">Backend</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-graph skill-ultra">
+                        <div class="skill-graph-center ">
+                            <span>125%</span>
+                        </div>
+                    </div>
+                    <p class="skill-description">Procrastination</p>
+                </div>
+            </div>
+        </section>
 
         <section id="portfolio">
             <div class="container clearfix">
@@ -91,6 +153,7 @@
             </div>
         </section>
 
+
         <section id="contact">
             <div class="container">
                 <h2>Contact</h2>
@@ -112,10 +175,11 @@
             <span>Student Name</span>
             <nav class="main-footer-nav clearfix">
                 <ul>
-                    <li><a class="list-item-narrow" href="#home">Back to Top</a></li>
-                    <li><a class="list-item-wide" href="#home">Home</a></li>
-                    <li><a class="list-item-wide" href="#portfolio">Portfolio</a></li>
-                    <li><a class="list-item-wide" href="#contact">Contact</a></li>
+                    <li class="list-item-narrow"><a href="#home">Back to Top</a></li>
+                    <li class="list-item-wide"><a href="#home">Home</a></li>
+                    <li class="list-item-wide"><a href="#skills">Skills</a></li>
+                    <li class="list-item-wide"><a href="#portfolio">Portfolio</a></li>
+                    <li class="list-item-wide"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>

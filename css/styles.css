@@ -21,14 +21,11 @@ p {
 h1,
 h2,
 h3,
-a
- {
+a {
   font-family: "ubuntu", sans-serif;
   color: #555;
   font-weight: 700;
 }
-
-
 
 h1 {
   margin-top: 5px;
@@ -49,14 +46,11 @@ a {
   text-decoration: none;
 }
 
+
 img {
   max-width: 100%;
 }
 
-hr {
-  width: 90%;
-  border-color: #f1f1f1;
-}
 
 /* ================================= 
   Base Layout Styles
@@ -71,13 +65,18 @@ hr {
 .main-nav ul li {
   background-color: #fff;
   margin-bottom: 5px;
-  font-weight: 800;
   text-transform: uppercase;
 }
 
 .main-nav a {
   padding: 8px 0;
   display: block;
+  transition: 0.2s background-color;
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+  background-color: #eee;
 }
 
 /* ----  Containers---- */
@@ -98,6 +97,77 @@ hr {
   margin-top: 20px;
   width: 70%;
 }
+
+
+/* ---- Skills Section ---- */
+
+#skills {
+  vertical-align: baseline;
+}
+.skill {
+  
+  display: inline-block;
+  margin: 5px 20px;
+  padding: 5px;
+}
+.skill-graph {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.skill-10 {
+  background-image: conic-gradient(#22bf22 0 deg 36deg, #eee 36deg 360deg);
+}
+.skill-20 {
+  background-image: conic-gradient(#22bf22 72deg, #eee 72deg);
+}
+.skill-30 {
+  background-image: conic-gradient(#22bf22 108deg, #eee 108deg);
+}
+.skill-40 {
+  background-image: conic-gradient(#22bf22 144deg, #eee 144deg);
+}
+.skill-50 {
+  background-image: conic-gradient(#22bf22 180deg, #eee 180deg);
+}
+.skill-60 {
+  background-image: conic-gradient(#22bf22 216deg, #eee 216deg);
+}
+.skill-70 {
+  background-image: conic-gradient(#22bf22 252deg, #eee 252deg);
+}
+.skill-80 {
+  background-image: conic-gradient(#22bf22 288deg, #eee 288deg);
+}
+.skill-90 {
+  background-image: conic-gradient(#22bf22 324deg, #eee 324deg);
+}
+.skill-100 {
+  background-image: conic-gradient(#22bf22 360deg, #eee 360deg);
+}
+
+.skill-ultra {
+  background-image: conic-gradient(rgba(224, 14, 14, 0.2) 90deg, transparent 90deg),
+  conic-gradient(#22bf22 360deg, #eee 360deg);
+}
+
+.skill-graph-center {
+  position: absolute;
+  margin: 0;
+  top: 10px;
+  right: 10px;
+  bottom:10px;
+  left: 10px;
+  background-color: #fff;
+  border-radius: 100%;
+  font-size: 1rem;
+  line-height: 60px;
+}
+
+
 
 /* ---- Contact Section ---- */
 #contact {
@@ -121,17 +191,16 @@ hr {
 /* ---- Footer ---- */
 .main-footer {
   font-size: 0.85em;
-  
 }
 
 .main-footer-wrapper span {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .main-footer-wrapper {
   text-align: left;
   padding: 15px 0;
-  font-family: "ubuntu", sans-serif; 
+  font-family: "ubuntu", sans-serif;
   border-top: 1px solid #d8d6d6;
 }
 
@@ -146,14 +215,9 @@ hr {
   margin: 0;
 }
 
-.main-footer-nav ul li {
-  display: inline-block;
-}
-
 .list-item-wide {
   display: none;
 }
-
 
 /* ---- Float clearfix ---- */
 .clearfix::after {
@@ -162,96 +226,100 @@ hr {
   clear: both;
 }
 
-
 /* ================================= 
   Media Queries
 ==================================== */
 @media (min-width: 768px) {
-    .main-nav ul li {
-        background-color: initial;
-        display: inline-block;
-        padding: 15px;
-        margin-bottom: 0;
-    }
 
-    .main-header {
-        padding-bottom: 60px;
-    }
+  .main-nav a,
+  a {
+    transition: 0.2s box-shadow;
+  }
+  .main-nav a:hover,
+  .main-nav a:active,
+  a:hover,
+  a:active {
+    background-color: initial;
+    box-shadow: 0 3px 0 -2px;
+  }
 
-    .profile-text {
-        float: left;
-        width: 60%;
-        padding-right: 1em;
-        text-align: left;
-        font-size: 1.2rem;
-    }
+  .main-nav ul li {
+    background-color: initial;
+    display: inline-block;
+    margin: 0 15px;
+  }
 
-    .logo {
-        float: right;
-        width: 40%;
-    }
+  .main-header {
+    padding-bottom: 60px;
+  }
 
-    .project {
-        width: 50%;
-        float: left;
-        padding: 0.25em;
-    }
+  .profile-text {
+    float: left;
+    width: 60%;
+    padding-right: 1em;
+    text-align: left;
+    font-size: 1.2rem;
+  }
 
-    .project p {
-      width: 70%;
-      
-      margin: 2em auto;
-    }
+  .logo {
+    float: right;
+    width: 40%;
+  }
 
-    .main-footer {
-        padding-bottom: 50px;
-    }
+  .project {
+    min-height: 25em;
+    width: 50%;
+    float: left;
+    padding: 0.25em;
+  }
 
-    .contact-text {
-        width: 75%;
-        margin: 0 auto;
-        font-size: 1.2rem;
-    }
+  .project p {
+    width: 70%;
 
-    /* ---- footer list items ---- */
-    .list-item-narrow {
-        display: none;
+    margin: 0 auto;
+  }
 
-    }
-    .list-item-wide {
-        display: inline-block;
-        padding-left: 15px;
-    }
+  .main-footer {
+    padding-bottom: 50px;
+  }
 
+  .contact-text {
+    width: 75%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+
+  /* ---- footer list items ---- */
+  .list-item-narrow {
+    display: none;
+  }
+  .list-item-wide {
+    display: inline-block;
+    padding-left: 15px;
+  }
 }
 
 @media (min-width: 1024px) {
-
-
   .container {
-    max-width: 1200px;
+    max-width: 1100px;
   }
-    .main-nav ul li {
-      padding: 0 15px;
-    }
-    .name {
-        float: left;
-    }
+  .main-nav ul li {
+  }
+  .name {
+    float: left;
+  }
 
-    .main-nav {
-        float: right;
-        padding: 10px 0;
-    }
+  .main-nav {
+    float: right;
+    padding: 10px 0;
+  }
 
-    .main-nav ul {
-      margin: 0;
-    }
+  .main-nav ul {
+    margin: 0;
+  }
 
-
-    .project {
-        padding: 5px;
-        width: 33%;
-    }
-
-
+  .project {
+    padding: 5px;
+    width: 33%;
+  }
 }
