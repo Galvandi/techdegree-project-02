@@ -46,7 +46,6 @@ a {
   text-decoration: none;
 }
 
-
 img {
   max-width: 100%;
 }
@@ -157,6 +156,10 @@ img {
 .contact-data {
   font-style: normal;
   margin: 30px 0;
+}
+
+.contact-data a {
+  color: #8279db;
 }
 
 .contact-data p {
@@ -279,6 +282,7 @@ img {
 }
 
 @media (min-width: 1024px) {
+  
   .container {
     max-width: 1200px;
   }
